@@ -5,5 +5,27 @@
   "main": "index.js",
   "repository": "git@github.com:articulate/spy.git",
   "author": "articulate",
-  "license": "MIT"
+  "license": "MIT",
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100
+  },
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov",
+    "lint": "eslint src test",
+    "postversion": "git push --tags origin master",
+    "preversion": "git checkout master",
+    "test": "mocha test.js --reporter=dot",
+    "test:ci": "yarn run lint && yarn run test:coverage",
+    "test:coverage": "nyc mocha test.js --reporter=dot"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.6.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.2.1"
+  }
 }
