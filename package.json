@@ -1,0 +1,9 @@
+{
+  "name": "@articulate/spy",
+  "version": "0.0.0",
+  "description": "The sneakiest of spies",
+  "main": "index.js",
+  "repository": "git@github.com:articulate/spy.git",
+  "author": "articulate",
+  "license": "MIT"
+}
