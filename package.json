@@ -15,7 +15,7 @@
   },
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov",
-    "lint": "eslint src test",
+    "lint": "eslint .",
     "postversion": "git push --tags origin master",
     "preversion": "git checkout master",
     "test": "mocha test.js --reporter=dot",
